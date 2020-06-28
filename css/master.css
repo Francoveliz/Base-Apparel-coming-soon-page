@@ -76,13 +76,13 @@ body {
 }
 
 #alert {
-  position: absolute;
+  position: relative;
   margin-left: -4.5rem;
-  margin-top: .8rem;
   visibility: hidden;
 }
 
 #alert-text {
+  text-align: left;
   margin-left: 1.6rem;
   margin-top: .5rem;
   font-size: 0.8rem;
@@ -119,14 +119,16 @@ button:hover {
   -moz-box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
   box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
 }
-button:active{
+
+button:active {
   filter: brightness(120%);
   /* shadow box */
   -webkit-box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
   -moz-box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
   box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
 }
-::placeholder{
+
+::placeholder {
   color: hsl(0, 36%, 70%);
   font-size: 0.8rem;
 }
@@ -194,20 +196,19 @@ button:active{
     border-radius: 2.3rem;
     background: #FFF6F5;
   }
+
   #alert {
-    position: absolute;
-    margin-left: -5rem;
-    margin-top: .6rem;
     visibility: hidden;
   }
 
   #alert-text {
-    margin-left: -1rem;
+    position: relative;
     margin-top: .5rem;
     font-size: 0.8rem;
     color: hsl(0, 36%, 70%);
     visibility: hidden;
   }
+
   button {
     width: 3.2rem;
     height: 2.3rem;
