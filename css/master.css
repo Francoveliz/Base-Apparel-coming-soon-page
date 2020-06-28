@@ -1,21 +1,17 @@
 body {
   font-family: 'Josefin Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .main {
-  max-height: 100vh;
-  max-width: 1440px;
+  min-height: 100vh;
   width: 100%;
+  max-width: 1440px;
   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   display: grid;
-  grid-template-columns: 1fr 42%;
+  grid-template-columns: 57.64% 42.36%;
+  grid-template-rows: 97px 1fr;
 }
-.left-side{
-  background:url("../images/bg-pattern-desktop.svg");
-}
+
 .text h1 {
   text-transform: uppercase;
   line-height: 4rem;
@@ -38,18 +34,32 @@ body {
   font-size: 0.8rem;
 }
 
-.left-side {
-  padding-left: 8.35rem;
+.content {
+  margin-left: 8rem;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: center;
 }
 
-.img-container img {
+.img-container {
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+
+#hero-desktop {
   width: 100%;
+}
+
+#hero-mobile {
+  display: none;
 }
 
 .logo {
   margin-top: 3.25rem;
   margin-bottom: 7rem;
-
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 8rem;
 }
 
 #email-input {
@@ -58,26 +68,28 @@ body {
   border-radius: 2.8rem;
   padding-left: 1.6rem;
   border: 1px solid hsl(0, 36%, 70%);
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
 #email-input:focus {
   outline: none;
 }
-#alert{
+
+#alert {
   position: absolute;
   margin-left: -4.5rem;
   margin-top: .8rem;
-visibility: hidden;
-
-
+  visibility: hidden;
 }
-#alert-text{
+
+#alert-text {
   margin-left: 1.6rem;
   margin-top: .5rem;
-    font-size: 0.8rem;
-    color: hsl(0, 36%, 70%);
-    visibility: hidden;
+  font-size: 0.8rem;
+  color: hsl(0, 36%, 70%);
+  visibility: hidden;
 }
+
 button {
   width: 5rem;
   height: 2.8rem;
@@ -91,10 +103,11 @@ button {
   position: absolute;
   text-align: center;
 }
-button i{
 
+button i {
   margin: auto;
 }
+
 button:focus {
   outline: none;
 }
@@ -102,8 +115,110 @@ button:focus {
 button:hover {
   filter: brightness(120%);
   /* shadow box */
-  -webkit-box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.21);
-  -moz-box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.21);
-  box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
+}
+button:active{
+  filter: brightness(120%);
+  /* shadow box */
+  -webkit-box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.21);
+}
+::placeholder{
+  color: hsl(0, 36%, 70%);
+  font-size: 0.8rem;
+}
 
+@media (max-width:769px) {
+  .main {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 11.2% 77.6% 11.2%;
+    grid-template-rows: 84px 31.25% 1fr;
+    text-align: center;
+  }
+
+  .logo {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: center;
+    height: 1.25rem;
+  }
+
+  .img-container {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    overflow: hidden;
+  }
+
+  #hero-mobile {
+    display: inline;
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 0;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: center;
+  }
+
+  .text p {
+    line-height: 1.1536rem;
+    width: 100%;
+    color: hsl(0, 36%, 70%);
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #hero-desktop {
+    display: none;
+  }
+
+  .text h1 {
+    line-height: 2rem;
+    font-size: 2.1rem;
+    letter-spacing: 0.4095rem;
+    margin-bottom: 1rem;
+  }
+
+  #email-input {
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 2.3rem;
+    background: #FFF6F5;
+  }
+  #alert {
+    position: absolute;
+    margin-left: -5rem;
+    margin-top: .6rem;
+    visibility: hidden;
+  }
+
+  #alert-text {
+    margin-left: -1rem;
+    margin-top: .5rem;
+    font-size: 0.8rem;
+    color: hsl(0, 36%, 70%);
+    visibility: hidden;
+  }
+  button {
+    width: 3.2rem;
+    height: 2.3rem;
+    border-radius: 2.3rem;
+    margin-left: -3.2rem;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    font-size: 1rem;
+    padding-top: .3rem;
+    color: white;
+    position: absolute;
+    text-align: center;
+  }
 }
