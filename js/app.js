@@ -14,7 +14,3 @@ function formAlert(textbox) {
 
   return true;
 }
-
-
-
-//
