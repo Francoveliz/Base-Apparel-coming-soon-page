@@ -7,7 +7,7 @@ function formAlert(textbox) {
   } else if (textbox.validity.typeMismatch) {
     document.getElementById("alert").style.visibility = "visible";
     document.getElementById("alert-text").style.visibility = "visible";
-      textbox.setCustomValidity('');
+    textbox.setCustomValidity('');
   } else {
     textbox.setCustomValidity('');
   }
